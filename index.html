@@ -9,7 +9,7 @@
 </head>
 <body class="home-body">
 
-    <!-- Top Global Navigation Bar (Part 1 of Dual Navigation System) -->
+    <!-- Top Global Navigation Bar with Animated Zodiac Dragon Emblem -->
     <header class="global-nav top-nav">
         <a href="index.html" class="logo">Wendy</a>
         <nav aria-label="Main navigation">
@@ -21,6 +21,19 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <!-- Animated Zodiac Dragon Logo Emblem (Returns to Home / Top) -->
+        <a href="index.html" class="dragon-emblem" aria-label="Wendy's Zodiac Dragon Emblem - Back to Top" title="Year of the Dragon · Sky Garden">
+            <svg class="dragon-icon" viewBox="0 0 64 64" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path class="dragon-horn" d="M18 14 C14 7, 7 9, 12 18" />
+                <path class="dragon-horn" d="M46 14 C50 7, 57 9, 52 18" />
+                <path d="M16 24 C16 14, 48 14, 48 24 C52 28, 50 38, 42 42 C38 50, 26 50, 22 42 C14 38, 12 28, 16 24 Z" />
+                <path class="dragon-whisker" d="M14 34 C7 34, 5 41, 10 43" />
+                <path class="dragon-whisker" d="M50 34 C57 34, 59 41, 54 43" />
+                <circle cx="25" cy="27" r="2" fill="currentColor" />
+                <circle cx="39" cy="27" r="2" fill="currentColor" />
+                <path d="M27 36 Q32 40 37 36" />
+            </svg>
+        </a>
     </header>
 
     <!-- Decorative Ambient Sky Garden Elements (Clouds, Sakura Petals & Amber Leaf) -->
@@ -32,52 +45,139 @@
     <div class="petal petal3" aria-hidden="true"></div>
     <div class="petal petal4" aria-hidden="true"></div>
 
-    <!-- Main Hero Section: Privacy-focused Interactive Avatar & Quick Shortcuts -->
-    <main class="hero-container">
-        <h1 class="hero-title">Welcome to My World</h1>
-        <p class="hero-subtitle">欢迎来到我的世界 · Wendi Xie</p>
+    <!-- Main Scrollable Content -->
+    <main>
+        <!-- Screen 1: Full-Viewport Hero & Interactive Personality/Skill Bubbles -->
+        <section class="hero-container">
+            <h1 class="hero-title">Welcome to My World</h1>
+            <p class="hero-subtitle">欢迎来到我的世界 · Wendi Xie</p>
 
-        <!-- Interactive Character Wrapper: Hover, click, or focus via Tab to reveal project bubbles -->
-        <div class="character-wrapper" tabindex="0" role="region" aria-label="Interactive character menu: hover or focus to view portfolio shortcuts">
-            <div class="character-avatar" aria-hidden="true">
-                <span>☁️</span>
-                <span class="avatar-hint">Explore</span>
+            <!-- Interactive Character Wrapper: Hover or Focus to Reveal Personality & Core Skills -->
+            <div class="character-wrapper" tabindex="0" role="region" aria-label="Interactive character menu: hover or focus to view personality traits and skills">
+                <div class="character-avatar" aria-hidden="true">
+                    <span>☁️</span>
+                    <span class="avatar-hint">Explore</span>
+                </div>
+                
+                <!-- 4 Radial Bubbles: Personality & Core Skills -->
+                <div class="bubbles-container">
+                    <a href="about.html" class="bubble">
+                        <h2>Data &amp; AI</h2>
+                        <p>Certified AI &amp; Mining</p>
+                    </a>
+                    <a href="about.html" class="bubble">
+                        <h2>Calm Creator</h2>
+                        <p>Mindful &amp; Detail-Driven</p>
+                    </a>
+                    <a href="about.html" class="bubble">
+                        <h2>Web &amp; UX</h2>
+                        <p>Human-Centered Code</p>
+                    </a>
+                    <a href="about.html" class="bubble">
+                        <h2>Garden Spirit</h2>
+                        <p>Nature &amp; Ethics</p>
+                    </a>
+                </div>
             </div>
-            
-            <!-- Radial Floating Shortcut Bubbles -->
-            <div class="bubbles-container">
-                <a href="works.html" class="bubble">
-                    <h2>Works</h2>
-                    <p>Academic Projects</p>
+
+            <p class="scroll-indicator" aria-hidden="true">Scroll to Explore ↓</p>
+        </section>
+
+        <!-- Screen 2: Short-Scroll Sky Garden Scene & Curated Portfolio Entry Cards -->
+        <section class="home-highlights" aria-label="Sky garden illustration and portfolio highlights">
+            <!-- Minimalist Floating Island & Character Illustration -->
+            <div class="garden-stage">
+                <svg class="garden-svg" viewBox="0 0 400 180" width="360" height="162" role="img" aria-label="Minimalist floating sky garden illustration with a calm character and companion cat">
+                    <ellipse cx="200" cy="145" rx="135" ry="22" fill="#DCE5E0" opacity="0.85" />
+                    <path d="M90 145 Q200 185 310 145 Z" fill="#C5D3CC" opacity="0.7" />
+                    <path d="M120 140 Q125 128 130 140 M125 140 Q132 125 138 140" stroke="#5C6B65" stroke-width="1.5" fill="none" />
+                    <path d="M270 138 Q275 126 280 138 M276 138 Q282 128 286 138" stroke="#5C6B65" stroke-width="1.5" fill="none" />
+                    <g class="character-breath">
+                        <circle cx="185" cy="92" r="14" fill="#2A3330" />
+                        <path d="M168 138 C168 112, 202 112, 202 138 Z" fill="#2A3330" />
+                        <rect x="192" y="114" width="16" height="11" rx="2" transform="rotate(-12 192 114)" fill="#F6F4EE" stroke="#D8B48A" stroke-width="1.5" />
+                    </g>
+                    <g class="cat-companion">
+                        <ellipse cx="235" cy="133" rx="10" ry="7" fill="#5C6B65" />
+                        <circle cx="235" cy="123" r="6" fill="#5C6B65" />
+                        <polygon points="230,119 232,113 235,118" fill="#5C6B65" />
+                        <polygon points="235,118 238,113 240,119" fill="#5C6B65" />
+                        <path d="M244 134 Q254 126 250 118" stroke="#5C6B65" stroke-width="2" fill="none" stroke-linecap="round" />
+                    </g>
+                    <circle cx="145" cy="70" r="3" fill="#E5C1C1" opacity="0.8" />
+                    <circle cx="260" cy="80" r="2.5" fill="#D8B48A" opacity="0.8" />
+                </svg>
+                <p class="garden-caption">“Designing calm, human-centered digital spaces rooted in clarity and warmth.”</p>
+            </div>
+
+            <!-- 3 Curated Navigation Cards -->
+            <div class="highlights-grid">
+                <a href="works.html" class="highlight-card">
+                    <div>
+                        <h2>Selected Works</h2>
+                        <p>Information architecture, user-centered web systems, and academic case studies.</p>
+                    </div>
+                    <span class="card-link-text">View Projects →</span>
                 </a>
-                <a href="archive.html" class="bubble">
-                    <h2>Archive</h2>
-                    <p>UI & Code Lab</p>
+
+                <a href="archive.html" class="highlight-card">
+                    <div>
+                        <h2>Digital Garden</h2>
+                        <p>A quiet laboratory for typography experiments, pure CSS micro-interactions, and visual studies.</p>
+                    </div>
+                    <span class="card-link-text">Enter Archive →</span>
                 </a>
-                <a href="about.html" class="bubble">
-                    <h2>About</h2>
-                    <p>Design Philosophy</p>
+
+                <a href="about.html" class="highlight-card">
+                    <div>
+                        <h2>Story &amp; Credentials</h2>
+                        <p>Master's studies at McGill University, AI certifications, and community volunteer work.</p>
+                    </div>
+                    <span class="card-link-text">Read Bio →</span>
                 </a>
-                <a href="contact.html" class="bubble">
-                    <h2>Contact</h2>
-                    <p>Let's Connect</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Minimalist Editorial Footer (Dual Navigation & Social Links) -->
+    <footer class="minimal-footer">
+        <div class="footer-top-row">
+            <nav aria-label="Footer navigation">
+                <ul class="footer-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="works.html">WORKS</a></li>
+                    <li><a href="archive.html">ARCHIVE</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <!-- Social Links: Instagram, Desktop Email, LinkedIn -->
+            <div class="footer-socials">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="mailto:wendi.xie@mail.mcgill.ca" aria-label="Send Email">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
                 </a>
             </div>
         </div>
-    </main>
 
-    <!-- Bottom Global Navigation Bar (Part 2 of Dual Navigation System for seamless page switching) -->
-    <footer class="global-nav bottom-nav">
-        <a href="index.html" class="logo">Wendy</a>
-        <nav aria-label="Footer navigation">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="works.html">Works</a></li>
-                <li><a href="archive.html">Archive</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <p class="footer-copyright">© 2026 Wendi Xie. All Rights Reserved.</p>
     </footer>
 
 </body>
