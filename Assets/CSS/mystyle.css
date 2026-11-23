@@ -1,0 +1,470 @@
+/* =========================================
+   1. Google Fonts & Global Variables
+   Defines the low-saturation "Sky Garden" palette and typography
+   ========================================= */
+@import url('https://googleapis.com');
+
+:root {
+    --bg-color: #F6F4EE;
+    --bg-gradient: linear-gradient(135deg, #F6F4EE 0%, #DCE5E0 100%);
+    --text-main: #2A3330;
+    --text-muted: #5C6B65;
+    --accent-pink: #E5C1C1;
+    --accent-amber: #D8B48A;
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.85);
+    --nav-bg: rgba(246, 244, 238, 0.88);
+    --spacing-section: 2rem;
+}
+
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    background: var(--bg-gradient);
+    color: var(--text-main);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   2. Dual Navigation Bar & Brand Logo
+   ========================================= */
+.global-nav {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 15px 0;
+    height: 65px;
+}
+
+.top-nav {
+    top: 0;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.bottom-nav {
+    bottom: 0;
+    border-top: 1px solid var(--glass-border);
+}
+
+.logo {
+    position: absolute;
+    left: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--accent-amber);
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.global-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.global-nav a:not(.logo) {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.global-nav a:not(.logo):hover,
+.global-nav a.active {
+    color: var(--text-main);
+    border-bottom: 2px solid var(--text-main);
+}
+
+/* =========================================
+   3. Home Page: Sky Garden Animations & Interactive Character
+   ========================================= */
+.home-body {
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Drifting Misty Clouds */
+.cloud {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+    opacity: 0.45;
+    filter: blur(25px);
+    z-index: -1;
+    animation: floatCloud 28s infinite linear;
+}
+
+.cloud1 { width: 320px; height: 110px; top: 18%; left: -320px; }
+.cloud2 { width: 450px; height: 160px; top: 62%; left: -450px; animation-duration: 38s; animation-delay: 4s; }
+.cloud3 { width: 260px; height: 90px; top: 40%; left: -260px; animation-duration: 24s; animation-delay: 10s; }
+
+@keyframes floatCloud {
+    to { transform: translateX(125vw); }
+}
+
+/* Falling Sakura Petals & Leaves */
+.petal {
+    position: absolute;
+    background: var(--accent-pink);
+    border-radius: 15px 0 15px 0;
+    opacity: 0.65;
+    z-index: -1;
+    animation: fall 10s infinite linear;
+}
+
+.petal1 { width: 14px; height: 14px; left: 15%; top: -20px; animation-delay: 0s; }
+.petal2 { width: 11px; height: 11px; left: 38%; top: -20px; animation-delay: 2.5s; }
+.petal3 { width: 16px; height: 16px; left: 65%; top: -20px; animation-delay: 5s; }
+.petal4 { width: 12px; height: 12px; left: 85%; top: -20px; animation-delay: 1.5s; background: var(--accent-amber); }
+
+@keyframes fall {
+    0% { transform: translateY(0) translateX(0) rotate(0deg); }
+    50% { transform: translateY(50vh) translateX(25px) rotate(180deg); }
+    100% { transform: translateY(105vh) translateX(-15px) rotate(360deg); }
+}
+
+/* Hero Typography */
+.hero-container {
+    text-align: center;
+    z-index: 10;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.2rem;
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 12px rgba(255, 255, 255, 0.7);
+}
+
+.hero-subtitle {
+    font-size: 1.35rem;
+    color: var(--text-muted);
+    margin-bottom: 55px;
+    letter-spacing: 4px;
+}
+
+/* Interactive Floating Avatar & Radial Bubbles */
+.character-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+}
+
+.character-avatar {
+    width: 145px;
+    height: 145px;
+    background: radial-gradient(circle at 30% 30%, #3d4a46, var(--text-main));
+    border: 3px solid var(--glass-border);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg-color);
+    font-size: 3.2rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 12px 28px rgba(42, 51, 48, 0.15);
+    animation: gentleFloat 4s ease-in-out infinite;
+}
+
+.avatar-hint {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 4px;
+    opacity: 0.85;
+}
+
+@keyframes gentleFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+.character-wrapper:hover .character-avatar,
+.character-wrapper:focus-within .character-avatar {
+    box-shadow: 0 16px 35px rgba(216, 180, 138, 0.35);
+}
+
+.bubbles-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.bubble {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-main);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: auto;
+    padding: 10px;
+}
+
+.bubble:nth-child(1) { top: -155px; left: -165px; }
+.bubble:nth-child(2) { top: -155px; right: -165px; }
+.bubble:nth-child(3) { bottom: -155px; left: -165px; }
+.bubble:nth-child(4) { bottom: -155px; right: -165px; }
+
+.character-wrapper:hover .bubble,
+.character-wrapper:focus-within .bubble {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.bubble:hover {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: var(--accent-amber);
+    transform: scale(1.08);
+}
+
+.bubble h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+}
+
+.bubble p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* =========================================
+   4. Inner Pages Shared Layout & Components
+   (Tables, Cards, Accordions, Progress Bars, Forms)
+   ========================================= */
+.page-container {
+    flex: 1;
+    max-width: 920px;
+    margin: 100px auto 90px;
+    padding: 25px;
+    width: 100%;
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    font-style: italic;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--accent-pink);
+    padding-bottom: 12px;
+}
+
+.about-list {
+    margin-left: 20px;
+    line-height: 1.9;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Structured Table Component */
+.skill-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: var(--glass-bg);
+}
+
+.skill-table th,
+.skill-table td {
+    border: 1px solid rgba(92, 107, 101, 0.35);
+    padding: 14px;
+    text-align: left;
+}
+
+.skill-table th {
+    background-color: rgba(220, 229, 224, 0.65);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+}
+
+/* Project Cards & Accordion Component */
+.work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.work-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 24px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+details {
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.55);
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+summary {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+details p {
+    margin-top: 10px;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* Skill Progress Bars */
+.progress-item {
+    margin-bottom: 20px;
+}
+
+.progress-item label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+progress {
+    width: 100%;
+    height: 12px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+progress::-webkit-progress-bar {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(90deg, var(--accent-pink), var(--accent-amber));
+    border-radius: 10px;
+}
+
+/* Accessible Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 32px;
+    border-radius: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid rgba(92, 107, 101, 0.4);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.submit-btn {
+    padding: 13px;
+    background: var(--text-main);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--accent-amber);
+    color: var(--text-main);
+}
+
+/* =========================================
+   5. Responsive Design (Tablet & Mobile)
+   ========================================= */
+@media (max-width: 768px) {
+    .logo { left: 15px; font-size: 1.45rem; }
+    .work-grid { grid-template-columns: 1fr; }
+    .global-nav ul { gap: 14px; }
+    .global-nav a:not(.logo) { font-size: 0.75rem; letter-spacing: 1px; }
+    .hero-title { font-size: 2.7rem; }
+    .hero-subtitle { font-size: 1.1rem; letter-spacing: 2px; }
+    .bubble { width: 105px; height: 105px; }
+    .bubble:nth-child(1) { top: -125px; left: -125px; }
+    .bubble:nth-child(2) { top: -125px; right: -125px; }
+    .bubble:nth-child(3) { bottom: -125px; left: -125px; }
+    .bubble:nth-child(4) { bottom: -125px; right: -125px; }
+}

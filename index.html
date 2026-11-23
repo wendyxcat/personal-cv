@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My World · Wendi Xie | Sky Garden</title>
+    <!-- Corrected path matching Assets/CSS/mystyle.css (Fonts are imported directly inside CSS) -->
+    <link rel="stylesheet" href="Assets/CSS/mystyle.css">
+</head>
+<body class="home-body">
+
+    <!-- Top Global Navigation Bar (Part 1 of Dual Navigation System) -->
+    <header class="global-nav top-nav">
+        <a href="index.html" class="logo">Wendy</a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="archive.html">Archive</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Decorative Ambient Sky Garden Elements (Clouds, Sakura Petals & Amber Leaf) -->
+    <div class="cloud cloud1" aria-hidden="true"></div>
+    <div class="cloud cloud2" aria-hidden="true"></div>
+    <div class="cloud cloud3" aria-hidden="true"></div>
+    <div class="petal petal1" aria-hidden="true"></div>
+    <div class="petal petal2" aria-hidden="true"></div>
+    <div class="petal petal3" aria-hidden="true"></div>
+    <div class="petal petal4" aria-hidden="true"></div>
+
+    <!-- Main Hero Section: Privacy-focused Interactive Avatar & Quick Shortcuts -->
+    <main class="hero-container">
+        <h1 class="hero-title">Welcome to My World</h1>
+        <p class="hero-subtitle">欢迎来到我的世界 · Wendi Xie</p>
+
+        <!-- Interactive Character Wrapper: Hover, click, or focus via Tab to reveal project bubbles -->
+        <div class="character-wrapper" tabindex="0" role="region" aria-label="Interactive character menu: hover or focus to view portfolio shortcuts">
+            <div class="character-avatar" aria-hidden="true">
+                <span>☁️</span>
+                <span class="avatar-hint">Explore</span>
+            </div>
+            
+            <!-- Radial Floating Shortcut Bubbles -->
+            <div class="bubbles-container">
+                <a href="works.html" class="bubble">
+                    <h2>Works</h2>
+                    <p>Academic Projects</p>
+                </a>
+                <a href="archive.html" class="bubble">
+                    <h2>Archive</h2>
+                    <p>UI & Code Lab</p>
+                </a>
+                <a href="about.html" class="bubble">
+                    <h2>About</h2>
+                    <p>Design Philosophy</p>
+                </a>
+                <a href="contact.html" class="bubble">
+                    <h2>Contact</h2>
+                    <p>Let's Connect</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Global Navigation Bar (Part 2 of Dual Navigation System for seamless page switching) -->
+    <footer class="global-nav bottom-nav">
+        <a href="index.html" class="logo">Wendy</a>
+        <nav aria-label="Footer navigation">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="archive.html">Archive</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
