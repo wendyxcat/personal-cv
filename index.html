@@ -3,40 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My World · Wendi Xie | Sky Garden</title>
-    <!-- Corrected path matching Assets/CSS/mystyle.css (Fonts are imported directly inside CSS) -->
+    <title>Welcome to My World! · Wendy | Sky Garden</title>
     <link rel="stylesheet" href="Assets/CSS/mystyle.css">
 </head>
 <body class="home-body">
 
-    <!-- Top Global Navigation Bar with Animated Zodiac Dragon Emblem -->
+    <!-- Top Global Navigation Bar (Left Brand Logo returns to Home) -->
     <header class="global-nav top-nav">
-        <a href="index.html" class="logo">Wendy</a>
+        <a href="index.html" class="logo" aria-label="Wendy Home">Wendy</a>
         <nav aria-label="Main navigation">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="works.html">Works</a></li>
                 <li><a href="archive.html">Archive</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <!-- Animated Zodiac Dragon Logo Emblem (Returns to Home / Top) -->
-        <a href="index.html" class="dragon-emblem" aria-label="Wendy's Zodiac Dragon Emblem - Back to Top" title="Year of the Dragon · Sky Garden">
-            <svg class="dragon-icon" viewBox="0 0 64 64" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path class="dragon-horn" d="M18 14 C14 7, 7 9, 12 18" />
-                <path class="dragon-horn" d="M46 14 C50 7, 57 9, 52 18" />
-                <path d="M16 24 C16 14, 48 14, 48 24 C52 28, 50 38, 42 42 C38 50, 26 50, 22 42 C14 38, 12 28, 16 24 Z" />
-                <path class="dragon-whisker" d="M14 34 C7 34, 5 41, 10 43" />
-                <path class="dragon-whisker" d="M50 34 C57 34, 59 41, 54 43" />
-                <circle cx="25" cy="27" r="2" fill="currentColor" />
-                <circle cx="39" cy="27" r="2" fill="currentColor" />
-                <path d="M27 36 Q32 40 37 36" />
-            </svg>
-        </a>
     </header>
 
-    <!-- Decorative Ambient Sky Garden Elements (Clouds, Sakura Petals & Amber Leaf) -->
+    <!-- Decorative Ambient Sky Garden Elements -->
     <div class="cloud cloud1" aria-hidden="true"></div>
     <div class="cloud cloud2" aria-hidden="true"></div>
     <div class="cloud cloud3" aria-hidden="true"></div>
@@ -47,35 +32,38 @@
 
     <!-- Main Scrollable Content -->
     <main>
-        <!-- Screen 1: Full-Viewport Hero & Interactive Personality/Skill Bubbles -->
+        <!-- Screen 1: Hero Title, Role & Center Reading Dragon Logo -->
         <section class="hero-container">
-            <h1 class="hero-title">Welcome to My World</h1>
-            <p class="hero-subtitle">欢迎来到我的世界 · Wendi Xie</p>
+            <h1 class="hero-title">Welcome to My World!</h1>
+            <p class="hero-subtitle">欢迎漫步 Wendy 的灵感世界</p>
+            <p class="hero-role">Master of Information Studies Student · Web Design &amp; Data Analysis · McGill University</p>
 
-            <!-- Interactive Character Wrapper: Hover or Focus to Reveal Personality & Core Skills -->
-            <div class="character-wrapper" tabindex="0" role="region" aria-label="Interactive character menu: hover or focus to view personality traits and skills">
-                <div class="character-avatar" aria-hidden="true">
-                    <span>☁️</span>
-                    <span class="avatar-hint">Explore</span>
+            <!-- Non-clickable Center Circular Reading Dragon Emblem with Radial Skill Bubbles -->
+            <div class="character-wrapper" tabindex="0" role="region" aria-label="Reading dragon emblem: hover or focus to view core skills and traits">
+                <div class="character-avatar">
+                    <video class="dragon-media" autoplay loop muted playsinline poster="Assets/IMG/Logo.jpg" aria-label="Animated circular emblem of a reading dragon">
+                        <source src="Assets/Video/Dragon Logo.mp4" type="video/mp4">
+                        <img src="Assets/IMG/Logo.jpg" alt="Circular reading dragon logo">
+                    </video>
                 </div>
                 
-                <!-- 4 Radial Bubbles: Personality & Core Skills -->
+                <!-- 4 Radial Bubbles Tailored to Wendi Xie's Resume -->
                 <div class="bubbles-container">
-                    <a href="about.html" class="bubble">
+                    <a href="works.html" class="bubble">
+                        <h2>Web &amp; SQL</h2>
+                        <p>HTML, CSS &amp; ERD</p>
+                    </a>
+                    <a href="works.html" class="bubble">
                         <h2>Data &amp; AI</h2>
-                        <p>Certified AI &amp; Mining</p>
+                        <p>Excel &amp; LLM Eval</p>
                     </a>
                     <a href="about.html" class="bubble">
-                        <h2>Calm Creator</h2>
-                        <p>Mindful &amp; Detail-Driven</p>
+                        <h2>UX &amp; IA</h2>
+                        <p>User-Centered Flows</p>
                     </a>
                     <a href="about.html" class="bubble">
-                        <h2>Web &amp; UX</h2>
-                        <p>Human-Centered Code</p>
-                    </a>
-                    <a href="about.html" class="bubble">
-                        <h2>Garden Spirit</h2>
-                        <p>Nature &amp; Ethics</p>
+                        <h2>Calm &amp; Driven</h2>
+                        <p>Detail-Oriented · Strong Execution</p>
                     </a>
                 </div>
             </div>
@@ -83,11 +71,10 @@
             <p class="scroll-indicator" aria-hidden="true">Scroll to Explore ↓</p>
         </section>
 
-        <!-- Screen 2: Short-Scroll Sky Garden Scene & Curated Portfolio Entry Cards -->
+        <!-- Screen 2: Sky Garden Illustration & Resume-Aligned Curated Cards -->
         <section class="home-highlights" aria-label="Sky garden illustration and portfolio highlights">
-            <!-- Minimalist Floating Island & Character Illustration -->
             <div class="garden-stage">
-                <svg class="garden-svg" viewBox="0 0 400 180" width="360" height="162" role="img" aria-label="Minimalist floating sky garden illustration with a calm character and companion cat">
+                <svg class="garden-svg" viewBox="0 0 400 180" width="360" height="162" role="img" aria-label="Minimalist floating sky garden illustration">
                     <ellipse cx="200" cy="145" rx="135" ry="22" fill="#DCE5E0" opacity="0.85" />
                     <path d="M90 145 Q200 185 310 145 Z" fill="#C5D3CC" opacity="0.7" />
                     <path d="M120 140 Q125 128 130 140 M125 140 Q132 125 138 140" stroke="#5C6B65" stroke-width="1.5" fill="none" />
@@ -107,31 +94,31 @@
                     <circle cx="145" cy="70" r="3" fill="#E5C1C1" opacity="0.8" />
                     <circle cx="260" cy="80" r="2.5" fill="#D8B48A" opacity="0.8" />
                 </svg>
-                <p class="garden-caption">“Designing calm, human-centered digital spaces rooted in clarity and warmth.”</p>
+                <p class="garden-caption">“Bridging rigorous data logic with calm, user-centered web experiences.”</p>
             </div>
 
-            <!-- 3 Curated Navigation Cards -->
+            <!-- 3 Curated Cards Reflecting McGill Projects, Lab & Credentials -->
             <div class="highlights-grid">
                 <a href="works.html" class="highlight-card">
                     <div>
-                        <h2>Selected Works</h2>
-                        <p>Information architecture, user-centered web systems, and academic case studies.</p>
+                        <h2>Academic Works</h2>
+                        <p>Relational database design (INFS 657), LLM evaluation workflows (INFS 692), and responsive web systems.</p>
                     </div>
-                    <span class="card-link-text">View Projects →</span>
+                    <span class="card-link-text">Explore Works →</span>
                 </a>
 
                 <a href="archive.html" class="highlight-card">
                     <div>
-                        <h2>Digital Garden</h2>
-                        <p>A quiet laboratory for typography experiments, pure CSS micro-interactions, and visual studies.</p>
+                        <h2>Design &amp; Code Lab</h2>
+                        <p>Information architecture sitemaps, Canva wireframes, and pure HTML/CSS visual studies.</p>
                     </div>
-                    <span class="card-link-text">Enter Archive →</span>
+                    <span class="card-link-text">View Archive →</span>
                 </a>
 
                 <a href="about.html" class="highlight-card">
                     <div>
                         <h2>Story &amp; Credentials</h2>
-                        <p>Master's studies at McGill University, AI certifications, and community volunteer work.</p>
+                        <p>McGill MISt student (GPA 3.96), BCom Honours graduate, and certified AI &amp; data practitioner.</p>
                     </div>
                     <span class="card-link-text">Read Bio →</span>
                 </a>
@@ -139,12 +126,11 @@
         </section>
     </main>
 
-    <!-- Minimalist Editorial Footer (Dual Navigation & Social Links) -->
+    <!-- Minimalist Editorial Footer -->
     <footer class="minimal-footer">
         <div class="footer-top-row">
             <nav aria-label="Footer navigation">
                 <ul class="footer-links">
-                    <li><a href="index.html">HOME</a></li>
                     <li><a href="works.html">WORKS</a></li>
                     <li><a href="archive.html">ARCHIVE</a></li>
                     <li><a href="about.html">ABOUT</a></li>
@@ -152,7 +138,7 @@
                 </ul>
             </nav>
 
-            <!-- Social Links: Instagram, Desktop Email, LinkedIn -->
+            <!-- Social Links: Instagram, Email, LinkedIn -->
             <div class="footer-socials">
                 <a href="https://www.instagram.com/wendyord366/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
