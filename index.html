@@ -8,7 +8,7 @@
 </head>
 <body class="home-body">
 
-    <!-- Top Global Navigation Bar (Left Brand Logo returns to Home) -->
+    <!-- Top Global Navigation Bar (Left Brand Logo, Center Links, Right Dragon Video Badge) -->
     <header class="global-nav top-nav">
         <a href="index.html" class="logo" aria-label="Wendy Home">Wendy</a>
         <nav aria-label="Main navigation">
@@ -19,6 +19,13 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <!-- Top-Right Circular Reading Dragon Video Emblem -->
+        <div class="top-dragon-badge" title="Year of the Dragon · Sky Garden">
+            <video class="dragon-video-icon" autoplay loop muted playsinline poster="Assets/IMG/Logo.jpg" aria-label="Animated circular emblem of a reading dragon">
+                <source src="Assets/Video/Dragon Logo.mp4" type="video/mp4">
+                <img src="Assets/IMG/Logo.jpg" alt="Circular reading dragon logo">
+            </video>
+        </div>
     </header>
 
     <!-- Decorative Ambient Sky Garden Elements -->
@@ -32,19 +39,17 @@
 
     <!-- Main Scrollable Content -->
     <main>
-        <!-- Screen 1: Hero Title, Role & Center Reading Dragon Logo -->
+        <!-- Screen 1: Hero Title, Role & Center Cloud with 4 Radial Skill Bubbles -->
         <section class="hero-container">
             <h1 class="hero-title">Welcome to My World!</h1>
             <p class="hero-subtitle">欢迎漫步 Wendy 的灵感世界</p>
             <p class="hero-role">Master of Information Studies Student · Web Design &amp; Data Analysis · McGill University</p>
 
-            <!-- Non-clickable Center Circular Reading Dragon Emblem with Radial Skill Bubbles -->
-            <div class="character-wrapper" tabindex="0" role="region" aria-label="Reading dragon emblem: hover or focus to view core skills and traits">
-                <div class="character-avatar">
-                    <video class="dragon-media" autoplay loop muted playsinline poster="Assets/IMG/Logo.jpg" aria-label="Animated circular emblem of a reading dragon">
-                        <source src="Assets/Video/Dragon Logo.mp4" type="video/mp4">
-                        <img src="Assets/IMG/Logo.jpg" alt="Circular reading dragon logo">
-                    </video>
+            <!-- Center Cloud Avatar: Hover or Focus to Reveal 4 Skill & Personality Bubbles -->
+            <div class="character-wrapper" tabindex="0" role="region" aria-label="Interactive cloud menu: hover or focus to view core skills and traits">
+                <div class="character-avatar" aria-hidden="true">
+                    <span>☁️</span>
+                    <span class="avatar-hint">Explore</span>
                 </div>
                 
                 <!-- 4 Radial Bubbles Tailored to Wendi Xie's Resume -->
@@ -118,7 +123,7 @@
                 <a href="about.html" class="highlight-card">
                     <div>
                         <h2>Story &amp; Credentials</h2>
-                        <p>McGill MISt student (GPA 3.96), BCom Honours graduate, and certified AI &amp; data practitioner.</p>
+                        <p>McGill MISt graduate student, BCom Honours alumna, and certified AI &amp; data practitioner.</p>
                     </div>
                     <span class="card-link-text">Read Bio →</span>
                 </a>

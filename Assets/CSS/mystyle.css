@@ -29,7 +29,7 @@ body {
 }
 
 /* =========================================
-   2. Top Navigation Bar & Brand Logo
+   2. Top Navigation Bar, Logo & Dragon Video Badge
    ========================================= */
 .global-nav {
     position: fixed; top: 0; left: 0; width: 100%; height: 65px;
@@ -61,6 +61,16 @@ body {
 
 .global-nav a:not(.logo):hover,
 .global-nav a.active { color: var(--text-main); border-bottom: 2px solid var(--text-main); }
+
+.top-dragon-badge {
+    position: absolute; right: 40px; width: 46px; height: 46px;
+    border-radius: 50%; overflow: hidden;
+    border: 2px solid var(--glass-border); background: #ffffff;
+    box-shadow: 0 4px 12px rgba(42, 51, 48, 0.12);
+    display: flex; justify-content: center; align-items: center;
+}
+
+.dragon-video-icon { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* =========================================
    3. Home Page: Sky Garden Animations & Hero
@@ -117,26 +127,27 @@ body {
 }
 
 /* =========================================
-   4. Center Rotating Reading Dragon Logo & Bubbles
+   4. Center Cloud Avatar & Radial Bubbles
    ========================================= */
 .character-wrapper { position: relative; display: inline-block; cursor: pointer; outline: none; }
 
-.dragon-logo-frame {
-    width: 155px; height: 155px; border-radius: 50%; overflow: hidden;
-    border: 3px solid var(--glass-border); background: #ffffff;
-    box-shadow: 0 12px 30px rgba(42, 51, 48, 0.14);
-    display: flex; justify-content: center; align-items: center;
-    animation: spin360 16s linear infinite; transition: box-shadow 0.4s ease;
+.character-avatar {
+    width: 145px; height: 145px;
+    background: radial-gradient(circle at 30% 30%, #3d4a46, var(--text-main));
+    border: 3px solid var(--glass-border); border-radius: 50%;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    color: var(--bg-color); font-size: 3.2rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 12px 28px rgba(42, 51, 48, 0.15);
+    animation: gentleFloat 4s ease-in-out infinite;
 }
 
-.character-wrapper:hover .dragon-logo-frame,
-.character-wrapper:focus-within .dragon-logo-frame {
-    animation-play-state: paused;
-    box-shadow: 0 16px 38px rgba(216, 180, 138, 0.45);
-}
+.avatar-hint { font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; opacity: 0.85; }
 
-.dragon-logo-media { width: 100%; height: 100%; object-fit: cover; display: block; }
-@keyframes spin360 { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.character-wrapper:hover .character-avatar,
+.character-wrapper:focus-within .character-avatar { box-shadow: 0 16px 35px rgba(216, 180, 138, 0.35); }
+
+@keyframes gentleFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-7px); } }
 
 .bubbles-container { position: absolute; top: 50%; left: 50%; width: 0; height: 0; pointer-events: none; }
 
@@ -180,7 +191,6 @@ body {
 .home-highlights { max-width: 920px; margin: 0 auto 100px; padding: 20px 25px; width: 100%; z-index: 10; }
 .garden-stage { text-align: center; margin-bottom: 50px; }
 .character-breath { animation: gentleFloat 4s ease-in-out infinite; }
-@keyframes gentleFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-7px); } }
 
 .garden-caption {
     font-family: 'Playfair Display', serif; font-style: italic;
@@ -279,13 +289,13 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
    ========================================= */
 @media (max-width: 768px) {
     .logo { left: 15px; font-size: 1.45rem; }
+    .top-dragon-badge { right: 15px; width: 38px; height: 38px; }
     .work-grid, .highlights-grid { grid-template-columns: 1fr; }
     .global-nav ul { gap: 16px; }
     .global-nav a:not(.logo) { font-size: 0.78rem; letter-spacing: 1px; }
     .hero-title { font-size: 2.7rem; }
     .hero-subtitle { font-size: 1.1rem; }
     .hero-role { font-size: 0.75rem; letter-spacing: 1.2px; padding: 6px 14px; }
-    .dragon-logo-frame { width: 130px; height: 130px; }
     .bubble { width: 108px; height: 108px; }
     .bubble:nth-child(1) { top: -125px; left: -125px; }
     .bubble:nth-child(2) { top: -125px; right: -125px; }
