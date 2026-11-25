@@ -283,11 +283,18 @@ body.about-body {
 
 .edu-row {
   display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(92, 107, 101, 0.22);
+}
+
+.edu-header {
+  display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 20px;
-  padding: 26px 0;
-  border-bottom: 1px solid rgba(92, 107, 101, 0.22);
+  gap: 16px;
+  margin-bottom: 4px;
 }
 
 .edu-school {
@@ -295,20 +302,26 @@ body.about-body {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--text-main);
-  margin-bottom: 6px;
+  margin: 0;
 }
 
 .edu-detail {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--text-muted);
-  line-height: 1.65;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.edu-detail strong {
+  color: var(--text-main);
+  font-weight: 600;
 }
 
 .edu-degree {
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   color: var(--text-main);
   white-space: nowrap;
 }
