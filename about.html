@@ -6,12 +6,14 @@
     <title>About · Wendy | Sky Garden</title>
     <!-- Bootstrap 5.3 CSS -->
     <link href="https://jsdelivr.net" rel="stylesheet">
-    <!-- Custom About CSS -->
+    <!-- Shared Global Stylesheet (Keeps Header, Fonts, Spinning Dragon Logo, Petals & Footer Identical to Home) -->
+    <link rel="stylesheet" href="Assets/CSS/mystyle.css">
+    <!-- About Page Specific Layout & Botanical Styles -->
     <link rel="stylesheet" href="Assets/CSS/about.css">
 </head>
 <body class="about-body">
 
-    <!-- Top Global Navigation Bar -->
+    <!-- Top Global Navigation Bar (Identical to index.html) -->
     <header class="global-nav top-nav">
         <a href="index.html" class="logo" aria-label="Wendy Home">Wendy</a>
         <nav aria-label="Main navigation">
@@ -22,163 +24,133 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <!-- Top-Right Circular Reading Dragon Badge -->
+        <!-- Top-Right Circular Spinning Reading Dragon Emblem -->
         <div class="top-dragon-badge" title="Year of the Dragon · Sky Garden">
             <img src="Assets/IMG/Logo.jpg" alt="Cute reading dragon logo" class="dragon-logo-img">
         </div>
     </header>
 
+    <!-- Decorative Ambient Sky Garden Elements (Floating Clouds & Falling Petals from Home) -->
+    <div class="cloud cloud1" aria-hidden="true"></div>
+    <div class="cloud cloud2" aria-hidden="true"></div>
+    <div class="cloud cloud3" aria-hidden="true"></div>
+    <div class="petal petal1" aria-hidden="true"></div>
+    <div class="petal petal2" aria-hidden="true"></div>
+    <div class="petal petal3" aria-hidden="true"></div>
+    <div class="petal petal4" aria-hidden="true"></div>
+
     <!-- Main Content -->
-    <main>
-        <!-- Section 1: About & Profile -->
-        <section class="about-hero py-5">
-            <div class="container py-md-3">
-                <div class="text-center mb-5">
-                    <span class="section-tag">ABOUT ME</span>
-                    <h1 class="display-5 serif-title mt-2">Story, Methods &amp; Credentials</h1>
-                </div>
+    <main class="about-main">
 
-                <div class="row align-items-center g-5 profile-card-wrapper mx-0">
-                    <div class="col-lg-7 col-md-12">
-                        <h2 class="section-label mb-3">PROFILE</h2>
-                        <h3 class="h4 fw-semibold mb-3">Wendi Xie (Wendy)</h3>
-                        <p class="lead-text mb-3">
-                            Second-year <strong>Master of Information Studies (MISt)</strong> student at McGill University (GPA: 3.96/4.00) with a multidisciplinary background in Hospitality &amp; Tourism Management.
-                        </p>
-                        <p class="body-text mb-4">
-                            Specialized in <strong>Information Architecture (IA)</strong>, <strong>User-Centered Design (UX)</strong>, and <strong>Data Science</strong>. Experienced in building responsive front-end interfaces (HTML, CSS, Bootstrap, SQL), designing wireframes and sitemaps, and orchestrating AI-driven evaluation workflows. Committed to bridging rigorous technical logic with calm, accessible digital experiences.
-                        </p>
+        <!-- Editorial Hero Banner with Soft Botanical Watercolor Overlay -->
+        <section class="about-banner">
+            <div class="container">
+                <p class="eyebrow-tag">ABOUT ME · SKY GARDEN</p>
+                <h1 class="about-hero-title">Story, Methods &amp; Credentials</h1>
+                <p class="about-hero-subtitle">Bridging rigorous data logic with calm, user-centered web experiences</p>
+            </div>
+        </section>
 
-                        <!-- Language Proficiency -->
-                        <div class="language-box pt-3 border-top">
-                            <span class="small text-uppercase fw-semibold text-muted d-block mb-2">Languages</span>
-                            <div class="d-flex flex-wrap gap-2">
-                                <span class="badge-pill-custom">Mandarin Chinese (Native)</span>
-                                <span class="badge-pill-custom">English (Fluent — Academic &amp; Professional)</span>
+        <!-- Section 1: Profile & Stylized Portrait (2-Column Glassmorphic Panel) -->
+        <section class="about-section">
+            <div class="container">
+                <div class="profile-panel">
+                    <div class="row align-items-center gx-lg-5 gy-5">
+                        <div class="col-lg-7 col-md-12">
+                            <h2 class="editorial-heading">PROFILE</h2>
+                            <h3 class="profile-name">Wendi Xie (Wendy)</h3>
+                            <p class="profile-bio">
+                                Second-year <strong>Master of Information Studies (MISt)</strong> candidate at McGill University (GPA: 3.96/4.00) with an interdisciplinary foundation in Hospitality &amp; Tourism Management.
+                            </p>
+                            <p class="profile-bio">
+                                Specialized in <strong>Information Architecture (IA)</strong>, <strong>User-Centered Design (UX)</strong>, and <strong>Data Science</strong>. Experienced in building responsive front-end interfaces (HTML5, CSS3, Bootstrap, SQL), designing wireframes and sitemaps, and orchestrating AI-driven evaluation workflows.
+                            </p>
+
+                            <!-- Language Proficiency List -->
+                            <div class="profile-languages">
+                                <span class="lang-label">LANGUAGES</span>
+                                <ul class="lang-list">
+                                    <li>Mandarin Chinese — Native Proficiency</li>
+                                    <li>English — Fluent Academic &amp; Professional Proficiency</li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Stylized Character Illustration -->
-                    <div class="col-lg-5 col-md-12 text-center">
-                        <div class="illustration-frame mx-auto">
-                            <img src="Assets/IMG/AI-Person.jpg" alt="Wendy Stylized Workspace Illustration" class="img-fluid rounded-4 shadow-sm">
-                            <p class="caption-text mt-2 mb-0">Montreal, QC · Exploring Information &amp; Design</p>
+                        <!-- Stylized Character Illustration -->
+                        <div class="col-lg-5 col-md-12">
+                            <figure class="portrait-frame mb-0">
+                                <img src="Assets/IMG/AI Person.jpg" alt="Wendy Stylized Workspace Illustration" class="img-fluid portrait-img">
+                                <figcaption class="portrait-caption">Montreal, QC · Exploring Information &amp; Design</figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 2: Academic Background -->
-        <section class="py-5 section-alt-bg">
+                <!-- Section 2: Experience & Applied Course Projects (Asymmetric 1/3 + 2/3 Split) -->
+        <section class="about-section">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4 mb-lg-0">
-                        <span class="section-tag">01 / BACKGROUND</span>
-                        <h2 class="serif-title h2 mt-2">Education</h2>
-                        <p class="text-muted small">Interdisciplinary foundation combining hospitality service logic with information systems architecture.</p>
-                    </div>
-                    <div class="col-lg-8">
-                        <!-- Master's Degree -->
-                        <div class="timeline-item pb-4 mb-4 border-bottom">
-                            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-baseline mb-1">
-                                <h3 class="h5 fw-semibold mb-0">McGill University</h3>
-                                <span class="date-badge">2025.08 – 2027.06</span>
-                            </div>
-                            <p class="text-accent fw-medium mb-2">Master of Information Studies (MISt) · Cumulative GPA: 3.96 / 4.00</p>
-                            <p class="body-text small mb-0">
-                                <strong>Relevant Coursework:</strong> Web System Design &amp; Management (INFS 634), Information Architecture, User-Centered Design, Database Design &amp; Development, Digital Curation, Organization of Information, Topics in AI Literacy, Research Principles &amp; Analysis.
-                            </p>
-                        </div>
-
-                        <!-- Bachelor's Degree -->
-                        <div class="timeline-item">
-                            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-baseline mb-1">
-                                <h3 class="h5 fw-semibold mb-0">University of Guelph</h3>
-                                <span class="date-badge">2021.09 – 2025.06</span>
-                            </div>
-                            <p class="text-accent fw-medium mb-2">Bachelor of Commerce (Honours) in Hospitality and Tourism Management</p>
-                            <p class="body-text small mb-0">
-                                <strong>Relevant Coursework &amp; Activities:</strong> Service Operations Management, Business &amp; Marketing Analytics, Information Management, Revenue Management, Financial &amp; Managerial Accounting, PJ's Restaurant Operations, WSET Level 1 Wine Training.
-                            </p>
+                <div class="row gx-lg-5">
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div class="sticky-section-header">
+                            <h2 class="editorial-heading">EXPERIENCE</h2>
+                            <p class="section-subtitle">Selected academic projects and remote industry internships in UX, web systems, and content operations.</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-                <!-- Section 3: Experiences & Course Projects -->
-        <section class="py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4 mb-lg-0">
-                        <span class="section-tag">02 / PRACTICE</span>
-                        <h2 class="serif-title h2 mt-2">Experience &amp; Projects</h2>
-                        <p class="text-muted small">Applied coursework in web engineering, database modeling, AI evaluation, and digital content strategy.</p>
-                    </div>
                     <div class="col-lg-8">
-                        <div class="d-flex flex-column gap-4">
+                        <div class="editorial-stack">
 
-                            <!-- Experience 1 -->
-                            <div class="exp-card p-4 rounded-4">
-                                <div class="d-flex flex-column flex-sm-row justify-content-between mb-2">
-                                    <span class="date-badge">2026.09 – 2026.12</span>
-                                    <span class="small text-muted">McGill University · INFS 634</span>
-                                </div>
-                                <h3 class="h5 fw-semibold">Web Designer &amp; Front-End Developer</h3>
-                                <p class="body-text small mb-0">
-                                    Architected sitemaps, brand identity systems, wireframes, and interactive multi-page personal portfolio websites using semantic HTML5, custom CSS, and Bootstrap 5.3 responsive grids.
+                            <!-- Experience Card 1 -->
+                            <article class="editorial-card">
+                                <span class="editorial-date">2026.09 – 2026.12</span>
+                                <h3 class="editorial-card-title">McGill University · INFS 634</h3>
+                                <p class="editorial-card-role">Web Designer &amp; Front-End Developer</p>
+                                <p class="editorial-card-desc mb-0">
+                                    Architected sitemaps, visual design systems, wireframes, and responsive multi-page personal portfolio websites using semantic HTML5, custom CSS3, and Bootstrap 5.3 grid layouts.
                                 </p>
-                            </div>
+                            </article>
 
-                            <!-- Experience 2 -->
-                            <div class="exp-card p-4 rounded-4">
-                                <div class="d-flex flex-column flex-sm-row justify-content-between mb-2">
-                                    <span class="date-badge">2026.09 – 2026.12</span>
-                                    <span class="small text-muted">McGill University · INFS 692</span>
-                                </div>
-                                <h3 class="h5 fw-semibold">Multi-Model LLM Evaluation &amp; Prompt Engineering</h3>
-                                <p class="body-text small mb-0">
+                            <!-- Experience Card 2 -->
+                            <article class="editorial-card">
+                                <span class="editorial-date">2026.09 – 2026.12</span>
+                                <h3 class="editorial-card-title">McGill University · INFS 692</h3>
+                                <p class="editorial-card-role">Multi-Model LLM Evaluation &amp; Prompt Engineering</p>
+                                <p class="editorial-card-desc mb-0">
                                     Built structured evaluation matrices and Retrieval-Augmented Generation (RAG) workflows to benchmark generative AI tools, analyze output reliability, and improve semantic information retrieval.
                                 </p>
-                            </div>
+                            </article>
 
-                            <!-- Experience 3 -->
-                            <div class="exp-card p-4 rounded-4">
-                                <div class="d-flex flex-column flex-sm-row justify-content-between mb-2">
-                                    <span class="date-badge">2026.05 – 2026.09</span>
-                                    <span class="small text-muted">Chengdu Honghaixing Trading Co., Ltd. (Remote)</span>
-                                </div>
-                                <h3 class="h5 fw-semibold">Content Operations Intern</h3>
-                                <p class="body-text small mb-0">
-                                    Created, reviewed, and formatted 150+ vertical articles across Zhihu, Toutiao, and Weibo. Conducted compliance screening and data-driven tag optimization, driving a 60% impression growth and 20% engagement boost.
+                            <!-- Experience Card 3 -->
+                            <article class="editorial-card">
+                                <span class="editorial-date">2026.05 – 2026.09</span>
+                                <h3 class="editorial-card-title">Chengdu Honghaixing Trading Co., Ltd.</h3>
+                                <p class="editorial-card-role">Content Operations Intern (Remote)</p>
+                                <p class="editorial-card-desc mb-0">
+                                    Produced, reviewed, and formatted 150+ vertical articles across Zhihu, Toutiao, and Weibo. Conducted compliance screening and data-driven tag optimization, driving a 60% impression growth and 20% engagement boost.
                                 </p>
-                            </div>
+                            </article>
 
-                            <!-- Experience 4 -->
-                            <div class="exp-card p-4 rounded-4">
-                                <div class="d-flex flex-column flex-sm-row justify-content-between mb-2">
-                                    <span class="date-badge">2026.01 – 2026.04</span>
-                                    <span class="small text-muted">McGill University · INFS 657 &amp; INFS 620</span>
-                                </div>
-                                <h3 class="h5 fw-semibold">Database Design &amp; Information Workflow Analysis</h3>
-                                <p class="body-text small mb-0">
-                                    Modeled 1NF–3NF relational databases and ERDs in Lucidchart, building a responsive HTML/PHP/SQL web application with full CRUD functionality; designed bilingual SOPs and WBS/RASCI project plans projected to cut repetitive library inquiries by 40%.
+                            <!-- Experience Card 4 -->
+                            <article class="editorial-card">
+                                <span class="editorial-date">2026.01 – 2026.04</span>
+                                <h3 class="editorial-card-title">McGill University · INFS 657 &amp; INFS 620</h3>
+                                <p class="editorial-card-role">Database Design &amp; Information Workflow Analysis</p>
+                                <p class="editorial-card-desc mb-0">
+                                    Modeled 1NF–3NF relational databases and ERDs in Lucidchart, building a responsive HTML/PHP/SQL web application with CRUD functionality; designed bilingual SOPs and WBS/RASCI project plans projected to cut repetitive library inquiries by 40%.
                                 </p>
-                            </div>
+                            </article>
 
-                            <!-- Experience 5 -->
-                            <div class="exp-card p-4 rounded-4">
-                                <div class="d-flex flex-column flex-sm-row justify-content-between mb-2">
-                                    <span class="date-badge">2024.05 – 2024.07</span>
-                                    <span class="small text-muted">Procter &amp; Gamble (Remote)</span>
-                                </div>
-                                <h3 class="h5 fw-semibold">Marketing Assistant Intern</h3>
-                                <p class="body-text small mb-0">
-                                    Conducted consumer behavior research on university hair-care habits, synthesized competitor and market trend reports, and produced standardized visual presentation decks for internal strategy reviews.
+                            <!-- Experience Card 5 -->
+                            <article class="editorial-card">
+                                <span class="editorial-date">2024.05 – 2024.07</span>
+                                <h3 class="editorial-card-title">Procter &amp; Gamble</h3>
+                                <p class="editorial-card-role">Marketing Assistant Intern (Remote)</p>
+                                <p class="editorial-card-desc mb-0">
+                                    Conducted consumer behavior research on university hair-care habits, synthesized competitor and market trend reports, and produced standardized presentation decks for internal strategy reviews.
                                 </p>
-                            </div>
+                            </article>
 
                         </div>
                     </div>
@@ -186,46 +158,85 @@
             </div>
         </section>
 
+                <!-- Section 3: Academic Background -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row gx-lg-5">
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <div class="sticky-section-header">
+                            <h2 class="editorial-heading">EDUCATION</h2>
+                            <p class="section-subtitle">Academic training from service operations to information systems.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="edu-list">
+                            <!-- Master's Degree -->
+                            <div class="edu-row">
+                                <div>
+                                    <h3 class="edu-school">McGill University · Information Studies</h3>
+                                    <p class="edu-detail mb-0">2025.08 – 2027.06 · Cumulative GPA: 3.96 / 4.00 · Web Systems, UX, IA, Database &amp; AI Literacy</p>
+                                </div>
+                                <span class="edu-degree">Master's</span>
+                            </div>
+
+                            <!-- Bachelor's Degree -->
+                            <div class="edu-row">
+                                <div>
+                                    <h3 class="edu-school">University of Guelph · Hospitality &amp; Tourism Management</h3>
+                                    <p class="edu-detail mb-0">2021.09 – 2025.06 · Honours Bachelor of Commerce · Service Operations, Analytics &amp; Marketing</p>
+                                </div>
+                                <span class="edu-degree">Bachelor's</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botanical Parallax Break Strip -->
+        <div class="botanical-break" aria-hidden="true"></div>
+
         <!-- Section 4: Categorized Skills & Certifications -->
-        <section class="py-5 section-alt-bg">
+        <section class="about-section pb-5">
             <div class="container">
                 <div class="mb-5">
-                    <span class="section-tag">03 / CAPABILITIES</span>
-                    <h2 class="serif-title h2 mt-2">Categorized Skills &amp; Certifications</h2>
+                    <h2 class="editorial-heading">SKILLS &amp; CERTIFICATIONS</h2>
+                    <p class="section-subtitle mb-0">Core technical stack, design methods, and verified credentials.</p>
                 </div>
 
                 <div class="row g-4">
                     <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="skill-card h-100 p-4 rounded-4">
-                            <h3 class="h6 fw-bold mb-2 text-accent">01 · Web &amp; Database</h3>
-                            <p class="small text-muted mb-0">
-                                HTML5, CSS3, Bootstrap 5.3, Responsive Grid Layout, Relational Database Design (1NF–3NF, ERD), SQL, Basic PHP.
+                        <div class="expertise-col h-100">
+                            <h3 class="expertise-title">Web &amp; Database</h3>
+                            <p class="expertise-text mb-0">
+                                HTML5, CSS3, Bootstrap 5.3, Responsive Grid Layouts, Relational Database Design (1NF–3NF, ERD), SQL, and Basic PHP.
                             </p>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="skill-card h-100 p-4 rounded-4">
-                            <h3 class="h6 fw-bold mb-2 text-accent">02 · UX &amp; Information Design</h3>
-                            <p class="small text-muted mb-0">
-                                Information Architecture (IA), Sitemaps, Wireframing &amp; Prototyping (Canva, Basic Figma), Usability Testing, Digital Curation.
+                        <div class="expertise-col h-100">
+                            <h3 class="expertise-title">UX &amp; Information Design</h3>
+                            <p class="expertise-text mb-0">
+                                Information Architecture (IA), Sitemaps, Wireframing &amp; Prototyping (Canva, Basic Figma), Usability Testing, and Digital Curation.
                             </p>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="skill-card h-100 p-4 rounded-4">
-                            <h3 class="h6 fw-bold mb-2 text-accent">03 · AI Workflows &amp; Data</h3>
-                            <p class="small text-muted mb-0">
-                                Prompt Engineering, RAG Workflow Testing, LLM Evaluation Matrices (ChatGPT, Gemini, Copilot, DeepSeek), Data Mining, MS Excel.
+                        <div class="expertise-col h-100">
+                            <h3 class="expertise-title">AI Workflows &amp; Data</h3>
+                            <p class="expertise-text mb-0">
+                                Prompt Engineering, RAG Workflow Testing, LLM Evaluation Matrices (ChatGPT, Gemini, Copilot, DeepSeek), Data Mining, and MS Excel.
                             </p>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="skill-card h-100 p-4 rounded-4">
-                            <h3 class="h6 fw-bold mb-2 text-accent">04 · Certifications</h3>
-                            <p class="small text-muted mb-0">
+                        <div class="expertise-col h-100">
+                            <h3 class="expertise-title">Certifications</h3>
+                            <p class="expertise-text mb-0">
                                 Tencent Cloud Certified Practitioner – AI; Data Mining (UIUC); Research Data Management &amp; Sharing (UNC &amp; Edinburgh); TCPS 2: CORE 2022.
                             </p>
                         </div>
@@ -233,6 +244,7 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- Minimalist Editorial Footer -->
@@ -250,7 +262,7 @@
 
             <!-- Social Links: Instagram, Email, LinkedIn -->
             <div class="footer-socials">
-                <a href="https://www.instagram.com/wendyord366/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -263,8 +275,7 @@
                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                     </svg>
                 </a>
-
-                <a href="https://www.linkedin.com/in/wendi-xie-490b68256/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
@@ -274,8 +285,10 @@
             </div>
         </div>
 
-        <p class="text-body-secondary small mb-0">© 2026 Wendi Xie. All Rights Reserved.</p>
+        <p class="footer-copyright">&copy; 2026 Wendi Xie. All Rights Reserved.</p>
     </footer>
 
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://jsdelivr.net"></script>
 </body>
 </html>
