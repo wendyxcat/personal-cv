@@ -227,53 +227,191 @@
         <!-- Botanical Parallax Break Strip -->
         <div class="botanical-break" aria-hidden="true"></div>
 
-        <!-- Section 4: Categorized Skills & Certifications -->
-        <section class="about-section pb-5">
+        <!-- Section 4: Technical Skills (Tool Badges + Categorized Skill Pills) -->
+        <section class="about-section">
             <div class="about-container">
-                <div class="mb-5">
-                    <h2 class="editorial-heading">SKILLS &amp; CERTIFICATIONS</h2>
-                    <p class="section-subtitle mb-0">Technical toolkit, UX research methods, and verified professional credentials.</p>
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+                    <div>
+                        <h2 class="editorial-heading mb-1">SKILLS &amp; TOOLKIT</h2>
+                        <p class="section-subtitle mb-0">Software tools, web technologies, and UX/AI methodologies I work with.</p>
+                    </div>
                 </div>
 
+                <!-- Icon Skill Cards Grid (Inspired by Reference CV Layout) -->
+                <div class="skills-badge-grid">
+                    <!-- Web & Database -->
+                    <span class="tech-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A6B5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        HTML5 &amp; CSS3
+                    </span>
+                    <span class="tech-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A6B5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M9 21V9"></path></svg>
+                        Bootstrap 5.3
+                    </span>
+                    <span class="tech-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A6B5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                        SQL &amp; ERD (1NF–3NF)
+                    </span>
+                    <span class="tech-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A6B5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                        Basic PHP
+                    </span>
+
+                    <!-- UX & Design -->
+                    <span class="tech-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B88E5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        Information Architecture
+                    </span>
+                    <span class="tech-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B88E5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        Wireframing &amp; Prototyping
+                    </span>
+                    <span class="tech-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B88E5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                        Canva &amp; Figma (Basic)
+                    </span>
+                    <span class="tech-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B88E5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                        Usability Testing &amp; UCD
+                    </span>
+
+                    <!-- AI Workflows & Office -->
+                    <span class="tech-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9C6B6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2V6a4 4 0 0 1 4-4z"></path></svg>
+                        Prompt Engineering &amp; RAG
+                    </span>
+                    <span class="tech-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9C6B6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                        LLM Evaluation &amp; Data Mining
+                    </span>
+                    <span class="tech-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9C6B6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        Digital Curation &amp; Archives
+                    </span>
+                    <span class="tech-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9C6B6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        MS Office (Excel, PPT, Word)
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Certifications & Hobbies/Interests (Two-Column Editorial Split) -->
+        <section class="about-section pt-0 pb-5">
+            <div class="about-container">
                 <div class="row g-4">
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="expertise-col h-100">
-                            <h3 class="expertise-title">Web &amp; Database</h3>
-                            <p class="expertise-text mb-0">
-                                HTML5, CSS3, Bootstrap 5.3, Responsive Web Layout, Relational Database Design (1NF–3NF, ERD), SQL, and Basic PHP.
-                            </p>
+                    <!-- Left Column: Certifications -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="editorial-panel h-100">
+                            <h2 class="editorial-heading mb-1">CERTIFICATIONS</h2>
+                            <p class="section-subtitle mb-4">Verified credentials in AI, data mining, and research stewardship.</p>
+
+                            <ul class="cert-list">
+                                <li class="cert-item">
+                                    <div>
+                                        <h3 class="cert-title">Tencent Cloud Certified Practitioner – AI</h3>
+                                        <p class="cert-issuer mb-0">Tencent Cloud · Artificial Intelligence Foundations</p>
+                                    </div>
+                                    <span class="cert-tag">AI</span>
+                                </li>
+                                <li class="cert-item">
+                                    <div>
+                                        <h3 class="cert-title">Data Mining Specialization</h3>
+                                        <p class="cert-issuer mb-0">University of Illinois Urbana-Champaign (Coursera)</p>
+                                    </div>
+                                    <span class="cert-tag">Data</span>
+                                </li>
+                                <li class="cert-item">
+                                    <div>
+                                        <h3 class="cert-title">Research Data Management &amp; Sharing</h3>
+                                        <p class="cert-issuer mb-0">UNC Chapel Hill &amp; The University of Edinburgh</p>
+                                    </div>
+                                    <span class="cert-tag">Curation</span>
+                                </li>
+                                <li class="cert-item border-0 pb-0">
+                                    <div>
+                                        <h3 class="cert-title">TCPS 2: CORE 2022</h3>
+                                        <p class="cert-issuer mb-0">Panel on Research Ethics · Human-Centered Design</p>
+                                    </div>
+                                    <span class="cert-tag">Ethics</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="expertise-col h-100">
-                            <h3 class="expertise-title">UX &amp; Information Design</h3>
-                            <p class="expertise-text mb-0">
-                                Information Architecture (IA), Sitemaps, Wireframes &amp; Prototyping (Canva, Basic Figma), User Research, and Digital Curation.
-                            </p>
-                        </div>
-                    </div>
+                                        <!-- Right Column: Hobbies & Interests (Circular Icon Badges) -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="editorial-panel h-100">
+                            <h2 class="editorial-heading mb-1">HOBBIES &amp; INTERESTS</h2>
+                            <p class="section-subtitle mb-4">Everyday inspirations outside coursework and code.</p>
 
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="expertise-col h-100">
-                            <h3 class="expertise-title">AI Workflows &amp; Data</h3>
-                            <p class="expertise-text mb-0">
-                                Prompt Engineering, RAG Workflow Testing, LLM Evaluation Matrices (ChatGPT, Gemini, Copilot, DeepSeek), Data Mining, and MS Office.
-                            </p>
-                        </div>
-                    </div>
+                            <div class="row g-4 pt-1">
+                                <!-- Hobby 1 -->
+                                <div class="col-6">
+                                    <div class="hobby-item text-center">
+                                        <div class="hobby-circle" aria-hidden="true">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                                            </svg>
+                                        </div>
+                                        <h3 class="hobby-title">Travel &amp; Event Planning</h3>
+                                        <p class="hobby-desc mb-0">Curating routes &amp; hospitality details</p>
+                                    </div>
+                                </div>
 
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="expertise-col h-100">
-                            <h3 class="expertise-title">Certifications</h3>
-                            <p class="expertise-text mb-0">
-                                Tencent Cloud Certified Practitioner – AI; Data Mining (UIUC); Research Data Management &amp; Sharing (UNC &amp; Edinburgh).
-                            </p>
+                                <!-- Hobby 2 -->
+                                <div class="col-6">
+                                    <div class="hobby-item text-center">
+                                        <div class="hobby-circle" aria-hidden="true">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                                                <circle cx="12" cy="13" r="4"></circle>
+                                            </svg>
+                                        </div>
+                                        <h3 class="hobby-title">Scenic Photography</h3>
+                                        <p class="hobby-desc mb-0">Capturing daily light on Instagram</p>
+                                    </div>
+                                </div>
+
+                                <!-- Hobby 3 -->
+                                <div class="col-6">
+                                    <div class="hobby-item text-center">
+                                        <div class="hobby-circle" aria-hidden="true">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                                                <line x1="7" y1="2" x2="7" y2="22"></line>
+                                                <line x1="17" y1="2" x2="17" y2="22"></line>
+                                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                            </svg>
+                                        </div>
+                                        <h3 class="hobby-title">Cinema &amp; Visual Arts</h3>
+                                        <p class="hobby-desc mb-0">Storytelling, color &amp; aesthetics</p>
+                                    </div>
+                                </div>
+
+                                <!-- Hobby 4 -->
+                                <div class="col-6">
+                                    <div class="hobby-item text-center">
+                                        <div class="hobby-circle" aria-hidden="true">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M8 22h8"></path>
+                                                <path d="M7 10h10"></path>
+                                                <path d="M12 15v7"></path>
+                                                <path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"></path>
+                                            </svg>
+                                        </div>
+                                        <h3 class="hobby-title">Culinary &amp; Wine</h3>
+                                        <p class="hobby-desc mb-0">WSET Level 1 &amp; café exploration</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
 
     </main>
 
@@ -318,6 +456,6 @@
     </footer>
 
     <!-- Bootstrap 5.3 JS Bundle -->
-    <script src="https://jsdelivr.net"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

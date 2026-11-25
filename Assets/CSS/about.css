@@ -348,35 +348,139 @@ body.about-body .global-nav {
   border-bottom: 1px solid var(--glass-border);
 }
 
-/* --- 4-Column Expertise & Skills Grid --- */
-.expertise-col {
-  background: rgba(255, 255, 255, 0.78);
+/* =========================================================
+   Icon Skill Badges, Certifications & Circular Hobby Icons
+   ========================================================= */
+
+.skills-badge-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  padding: 11px 18px;
+  box-shadow: 0 6px 18px rgba(42, 51, 48, 0.03);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tech-badge:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-amber);
+  box-shadow: 0 10px 24px rgba(42, 51, 48, 0.06);
+}
+
+/* --- Two-Column Certifications & Hobbies Panels --- */
+.editorial-panel {
+  background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
-  border-radius: 12px;
-  padding: 28px 24px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  border-radius: 16px;
+  padding: 36px 34px;
+  box-shadow: 0 12px 32px rgba(42, 51, 48, 0.04);
 }
 
-.expertise-col:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent-amber);
+.cert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.expertise-title {
+.cert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(92, 107, 101, 0.16);
+}
+
+.cert-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.18rem;
+  font-size: 1.06rem;
   font-weight: 600;
   color: var(--text-main);
-  margin-bottom: 12px;
+  margin-bottom: 3px;
 }
 
-.expertise-text {
+.cert-issuer {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.78;
+  font-size: 0.82rem;
   color: var(--text-muted);
+}
+
+.cert-tag {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #4A6B5D;
+  background: rgba(220, 229, 224, 0.65);
+  border: 1px solid rgba(74, 107, 93, 0.2);
+  padding: 4px 11px;
+  border-radius: 50rem;
+  white-space: nowrap;
+}
+
+/* --- Circular Hobby Icons (Inspired by Han Nguyen Reference) --- */
+.hobby-item {
+  padding: 10px 6px;
+}
+
+.hobby-circle {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: rgba(220, 229, 224, 0.65);
+  border: 1px solid rgba(74, 107, 93, 0.22);
+  color: #4A6B5D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.hobby-item:hover .hobby-circle {
+  transform: translateY(-3px);
+  background: rgba(216, 180, 138, 0.35);
+  border-color: var(--accent-amber);
+  color: var(--text-main);
+}
+
+.hobby-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.hobby-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .editorial-panel {
+    padding: 26px 20px;
+  }
 }
 
 /* --- Responsive Adjustments --- */
