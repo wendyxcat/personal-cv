@@ -4,13 +4,19 @@
    Harmonized with mystyle.css & Bootstrap 5.3
    ========================================================= */
 
+/* --- Page Base (Remove top padding since navbar now scrolls with the page) --- */
 body.about-body {
   background: var(--bg-gradient);
   color: var(--text-main);
   font-family: 'Cormorant Garamond', Georgia, serif;
-  padding-top: 65px; /* Offset for fixed .global-nav in mystyle.css */
+  padding-top: 0;
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+/* --- Make Top Navigation Scroll Away Naturally --- */
+body.about-body .global-nav {
+  position: relative;
 }
 
 .about-main {
@@ -210,7 +216,7 @@ body.about-body {
 /* --- Asymmetric Two-Column Sticky Header --- */
 .sticky-section-header {
   position: sticky;
-  top: 105px;
+  top: 40px;
 }
 
 .section-subtitle {
