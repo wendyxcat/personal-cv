@@ -436,6 +436,20 @@ body.about-body .global-nav {
   white-space: nowrap;
 }
 
+/* --- Skills Section Summary Line --- */
+.skills-summary {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-main);
+  max-width: 780px;
+}
+
+.skills-summary strong {
+  color: #4A6B5D;
+  font-weight: 600;
+}
+
 /* --- Circular Hobby Icons (Inspired by Han Nguyen Reference) --- */
 .hobby-item {
   padding: 10px 6px;
