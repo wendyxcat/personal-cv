@@ -227,7 +227,7 @@
         <!-- Botanical Parallax Break Strip -->
         <div class="botanical-break" aria-hidden="true"></div>
 
-                <!-- Section 4: Technical Skills & Toolkit -->
+                        <!-- Section 4: Technical Skills & Toolkit -->
         <section class="about-section">
             <div class="about-container">
                 <div class="mb-4">
@@ -237,7 +237,13 @@
                         Combining <strong>structured data modeling</strong>, <strong>human-centered UX design</strong>, and <strong>AI-assisted workflows</strong> to turn complex information into clean, accessible digital interfaces.
                     </p>
                 </div>
+
+                <!-- Keep .skills-badge-grid INSIDE .about-container so it aligns with the heading -->
+                <div class="skills-badge-grid">
+                    <!-- All your <span class="tech-badge">...</span> items stay here -->
+                </div>
             </div>
+        </section>
 
                 <!-- Icon Skill Cards Grid (Inspired by Reference CV Layout) -->
                 <div class="skills-badge-grid">
@@ -298,123 +304,109 @@
             </div>
         </section>
 
-        <!-- Section 5: Certifications & Hobbies/Interests (Two-Column Editorial Split) -->
+                <!-- Section 5: Certifications & Hobbies (Separated Editorial Panels) -->
         <section class="about-section pt-0 pb-5">
             <div class="about-container">
-                <div class="row g-4">
-                    <!-- Left Column: Certifications -->
-                    <div class="col-lg-6 col-md-12">
-                        <div class="editorial-panel h-100">
-                            <h2 class="editorial-heading mb-1">CERTIFICATIONS</h2>
-                            <p class="section-subtitle mb-4">Verified credentials in AI, data mining, and research stewardship.</p>
 
-                            <ul class="cert-list">
-                                <li class="cert-item">
-                                    <div>
-                                        <h3 class="cert-title">Tencent Cloud Certified Practitioner – AI</h3>
-                                        <p class="cert-issuer mb-0">Tencent Cloud · Artificial Intelligence Foundations</p>
-                                    </div>
-                                    <span class="cert-tag">AI</span>
-                                </li>
-                                <li class="cert-item">
-                                    <div>
-                                        <h3 class="cert-title">Data Mining Specialization</h3>
-                                        <p class="cert-issuer mb-0">University of Illinois Urbana-Champaign (Coursera)</p>
-                                    </div>
-                                    <span class="cert-tag">Data</span>
-                                </li>
-                                <li class="cert-item">
-                                    <div>
-                                        <h3 class="cert-title">Research Data Management &amp; Sharing</h3>
-                                        <p class="cert-issuer mb-0">UNC Chapel Hill &amp; The University of Edinburgh</p>
-                                    </div>
-                                    <span class="cert-tag">Curation</span>
-                                </li>
-                                <li class="cert-item border-0 pb-0">
-                                    <div>
-                                        <h3 class="cert-title">TCPS 2: CORE 2022</h3>
-                                        <p class="cert-issuer mb-0">Panel on Research Ethics · Human-Centered Design</p>
-                                    </div>
-                                    <span class="cert-tag">Ethics</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <!-- Panel A: Certifications -->
+                <div class="editorial-panel mb-5">
+                    <h2 class="editorial-heading mb-1">CERTIFICATIONS</h2>
+                    <p class="section-subtitle mb-4">Verified credentials in AI, data mining, and research stewardship.</p>
 
-                                        <!-- Right Column: Hobbies & Interests (Circular Icon Badges) -->
-                    <div class="col-lg-6 col-md-12">
-                        <div class="editorial-panel h-100">
-                            <h2 class="editorial-heading mb-1">HOBBIES &amp; INTERESTS</h2>
-                            <p class="section-subtitle mb-4">Everyday inspirations outside coursework and code.</p>
-
-                            <div class="row g-4 pt-1">
-                                <!-- Hobby 1 -->
-                                <div class="col-6">
-                                    <div class="hobby-item text-center">
-                                        <div class="hobby-circle" aria-hidden="true">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                                <circle cx="12" cy="12" r="10"></circle>
-                                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-                                            </svg>
-                                        </div>
-                                        <h3 class="hobby-title">Travel &amp; Event Planning</h3>
-                                        <p class="hobby-desc mb-0">Curating routes &amp; hospitality details</p>
-                                    </div>
-                                </div>
-
-                                <!-- Hobby 2 -->
-                                <div class="col-6">
-                                    <div class="hobby-item text-center">
-                                        <div class="hobby-circle" aria-hidden="true">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                                                <circle cx="12" cy="13" r="4"></circle>
-                                            </svg>
-                                        </div>
-                                        <h3 class="hobby-title">Scenic Photography</h3>
-                                        <p class="hobby-desc mb-0">Capturing daily light on Instagram</p>
-                                    </div>
-                                </div>
-
-                                <!-- Hobby 3 -->
-                                <div class="col-6">
-                                    <div class="hobby-item text-center">
-                                        <div class="hobby-circle" aria-hidden="true">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
-                                                <line x1="7" y1="2" x2="7" y2="22"></line>
-                                                <line x1="17" y1="2" x2="17" y2="22"></line>
-                                                <line x1="2" y1="12" x2="22" y2="12"></line>
-                                            </svg>
-                                        </div>
-                                        <h3 class="hobby-title">Cinema &amp; Visual Arts</h3>
-                                        <p class="hobby-desc mb-0">Storytelling, color &amp; aesthetics</p>
-                                    </div>
-                                </div>
-
-                                <!-- Hobby 4 -->
-                                <div class="col-6">
-                                    <div class="hobby-item text-center">
-                                        <div class="hobby-circle" aria-hidden="true">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                                <path d="M8 22h8"></path>
-                                                <path d="M7 10h10"></path>
-                                                <path d="M12 15v7"></path>
-                                                <path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"></path>
-                                            </svg>
-                                        </div>
-                                        <h3 class="hobby-title">Culinary &amp; Wine</h3>
-                                        <p class="hobby-desc mb-0">WSET Level 1 &amp; café exploration</p>
-                                    </div>
-                                </div>
+                    <ul class="cert-list">
+                        <li class="cert-item">
+                            <div>
+                                <h3 class="cert-title">Tencent Cloud Certified Practitioner – AI</h3>
+                                <p class="cert-issuer mb-0">Tencent Cloud · Artificial Intelligence Foundations</p>
                             </div>
+                            <span class="cert-tag">AI</span>
+                        </li>
+                        <li class="cert-item">
+                            <div>
+                                <h3 class="cert-title">Data Mining Specialization</h3>
+                                <p class="cert-issuer mb-0">University of Illinois Urbana-Champaign (Coursera)</p>
+                            </div>
+                            <span class="cert-tag">Data</span>
+                        </li>
+                        <li class="cert-item">
+                            <div>
+                                <h3 class="cert-title">Research Data Management &amp; Sharing</h3>
+                                <p class="cert-issuer mb-0">UNC Chapel Hill &amp; The University of Edinburgh</p>
+                            </div>
+                            <span class="cert-tag">Curation</span>
+                        </li>
+                        <li class="cert-item border-0 pb-0">
+                            <div>
+                                <h3 class="cert-title">TCPS 2: CORE 2022</h3>
+                                <p class="cert-issuer mb-0">Panel on Research Ethics · Human-Centered Design</p>
+                            </div>
+                            <span class="cert-tag">Ethics</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Panel B: Hobbies & Interests (4-Column Aligned Grid) -->
+                <div class="editorial-panel">
+                    <h2 class="editorial-heading mb-1">HOBBIES &amp; INTERESTS</h2>
+                    <p class="section-subtitle mb-4">Everyday inspirations outside coursework and code.</p>
+
+                    <div class="hobbies-grid">
+                        <!-- Hobby 1 -->
+                        <div class="hobby-item">
+                            <div class="hobby-circle" aria-hidden="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                                </svg>
+                            </div>
+                            <h3 class="hobby-title">Travel &amp; Event Planning</h3>
+                            <p class="hobby-desc">Curating routes &amp; hospitality details</p>
+                        </div>
+
+                        <!-- Hobby 2 -->
+                        <div class="hobby-item">
+                            <div class="hobby-circle" aria-hidden="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                                    <circle cx="12" cy="13" r="4"></circle>
+                                </svg>
+                            </div>
+                            <h3 class="hobby-title">Scenic Photography</h3>
+                            <p class="hobby-desc">Capturing daily light on Instagram</p>
+                        </div>
+
+                        <!-- Hobby 3 -->
+                        <div class="hobby-item">
+                            <div class="hobby-circle" aria-hidden="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                                    <line x1="7" y1="2" x2="7" y2="22"></line>
+                                    <line x1="17" y1="2" x2="17" y2="22"></line>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                </svg>
+                            </div>
+                            <h3 class="hobby-title">Cinema &amp; Visual Arts</h3>
+                            <p class="hobby-desc">Storytelling, color &amp; aesthetics</p>
+                        </div>
+
+                        <!-- Hobby 4 -->
+                        <div class="hobby-item">
+                            <div class="hobby-circle" aria-hidden="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M8 22h8"></path>
+                                    <path d="M7 10h10"></path>
+                                    <path d="M12 15v7"></path>
+                                    <path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="hobby-title">Culinary &amp; Wine</h3>
+                            <p class="hobby-desc">WSET Level 1 &amp; café exploration</p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
-
-
     </main>
 
     <!-- Minimalist Editorial Footer -->
