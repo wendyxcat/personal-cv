@@ -352,7 +352,10 @@ body.about-body .global-nav {
    Icon Skill Badges, Certifications & Circular Hobby Icons
    ========================================================= */
 
+/* --- Skills Badge Grid (Aligned Inside .about-container) --- */
 .skills-badge-grid {
+  width: 100%;
+  margin-top: 24px;
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
@@ -382,15 +385,20 @@ body.about-body .global-nav {
   box-shadow: 0 10px 24px rgba(42, 51, 48, 0.06);
 }
 
-/* --- Two-Column Certifications & Hobbies Panels --- */
+/* --- Separate Certifications & Hobbies Panels with Generous Vertical Gap --- */
 .editorial-panel {
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.84);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
-  padding: 36px 34px;
+  padding: 40px 42px;
+  margin-bottom: 48px; /* Forces clean separation between Certifications and Hobbies */
   box-shadow: 0 12px 32px rgba(42, 51, 48, 0.04);
+}
+
+.editorial-panel:last-child {
+  margin-bottom: 0;
 }
 
 .cert-list {
@@ -463,9 +471,7 @@ body.about-body .global-nav {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 16px 12px;
-  border-radius: 12px;
-  transition: background-color 0.25s ease;
+  padding: 18px 10px 22px;
 }
 
 .hobby-circle {
@@ -500,8 +506,8 @@ body.about-body .global-nav {
 
 .hobby-desc {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 0.82rem;
-  line-height: 1.5;
+  font-size: 0.84rem;
+  line-height: 1.6;
   color: var(--text-muted);
   text-align: center;
   margin: 0;
